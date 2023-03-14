@@ -85,11 +85,11 @@ jobs:
         run: rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim
       
       - name: Install app dependencies
-        run: yarn
+        run: cargo
 
       - name: Init Android Studio Project
         if: ${{ matrix.android }}
-        run: yarn tauri android init
+        run: cargo tauri android init
         env:
           NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
