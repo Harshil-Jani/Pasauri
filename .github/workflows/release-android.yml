@@ -83,13 +83,12 @@ jobs:
       - name: ios Rust target
         if: ${{ matrix.ios }}
         run: rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim
-      
-      - name: Install app dependencies
-        run: cargo
+       - name: Install app dependencies
+        run: yarn
 
       - name: Init Android Studio Project
         if: ${{ matrix.android }}
-        run: cargo tauri android init
+        run: yarn tauri android init
         env:
           NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
