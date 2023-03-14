@@ -88,7 +88,7 @@ jobs:
         run: cargo
 
       - name: Install Tauri CLI
-        run: cargo install tauri-cli
+        run: cargo install --git https://github.com/tauri-apps/tauri --branch next tauri-cli
 
       - name: Init Android Studio Project
         if: ${{ matrix.android }}
