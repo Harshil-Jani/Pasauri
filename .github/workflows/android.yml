@@ -89,7 +89,7 @@ jobs:
 
       - name: Init Android Studio Project
         if: ${{ matrix.android }}
-        run: cargo tauri android init [--open]
+        run: cargo tauri android init
         env:
           NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
