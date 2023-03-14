@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "Pasauri",
+    "productName": "pasauri",
     "version": "0.0.0"
   },
   "tauri": {
